@@ -76,11 +76,11 @@ const fetchWeatherForcast = (data_id, location) => {
             const targetElements = extractTargetElements(weatherElements, ["Wx", "T"]);
 
             let ptr = 0;
-            let lastWeatherInfoDate = parseDate(Date.parse(targetElements.Wx.time[0].startTime)).date;
+            let lastWeatherInfoDate = parseDate(Date.parse(targetElements.Wx.time[0].startTime.replace(/\-/g, '/'))).date;
 
             for(let ei = 0; ei < 14; ++ei){
     
-                const currentWeatherElementDate = parseDate(Date.parse(targetElements.Wx.time[ei].startTime)).date;
+                const currentWeatherElementDate = parseDate(Date.parse(targetElements.Wx.time[ei].startTime.replace(/\-/g, '/'))).date;
     
                 if(currentWeatherElementDate !== lastWeatherInfoDate){
                    ptr++; 
