@@ -81,7 +81,7 @@ export class WeatherInfo_1WEEK {
     
             weatherDesc: {
                 name: "",
-                value: "123",
+                value: "",
             },
     
             temperature: "",
@@ -103,14 +103,14 @@ export class WeatherInfo_1WEEK {
     }
 
     parseWxElement(weatherElement){
-        const dayNight = parseDate(Date.parse(weatherElement.startTime)).dayNight;
+        const dayNight = parseDate(Date.parse(weatherElement.startTime.replace(/\-/g, '/'))).dayNight;
         ({startTime: this[dayNight].time.startTime, endTime: this[dayNight].time.endTime} = weatherElement);
         this[dayNight].weatherDesc.name = weatherElement.elementValue[0].value;
         this[dayNight].weatherDesc.value = weatherElement.elementValue[1].value;
     }
 
     parseTElement(weatherElement){
-        const dayNight = parseDate(Date.parse(weatherElement.startTime)).dayNight;
+        const dayNight = parseDate(Date.parse(weatherElement.startTime.replace(/\-/g, '/'))).dayNight;
         this[dayNight].temperature = weatherElement.elementValue[0].value;
     }
 };

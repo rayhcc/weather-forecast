@@ -96,6 +96,8 @@ const fetchWeatherForcast = (data_id, location) => {
                 weatherInfos[ptr].parseTElement(targetElements.T.time[ei]);
             }
 
+            console.log(targetElements);
+            console.log(weatherInfos);
             return weatherInfos;
         },
     }
@@ -138,6 +140,9 @@ export default function Main() {
         });
 
     }, [location]);
+
+
+
 
     return(
         <main className = "weather-forecast-conatiner">
