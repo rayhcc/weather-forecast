@@ -1,0 +1,292 @@
+/*//////////////////////////////
+WeatherForcast_36hrs
+//////////////////////////////*/
+.weatherForecast-36hrs {
+    width: 32em;
+    height: 32em;
+    border-radius: 1.1em;
+
+    background-color: rgb(39,39,39);
+
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    overflow: hidden;
+}
+.weatherCard-36hrs-container {
+    background-color: rgb(39,39,39);
+
+    width: 100%;
+    height: 85%;
+    border-radius: 1.1em;
+
+    
+
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.6fr 0.4fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    justify-items: center;
+}
+
+.weatherCard-36hrs{
+    width: 85%;
+    height: 85%;
+
+    display: grid;
+    grid-template-columns: 0.45fr 0.25fr 0.30fr;
+    grid-template-rows: 0.3fr 0.35fr 0.35fr;
+    justify-items: left;
+    align-items: center;
+}
+
+.weatherCard-36hrs:nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+
+    font-size: 1.5rem;
+}
+
+.weatherCard-36hrs:nth-child(2) {
+    grid-column: 1/2;
+    grid-row:2/3;
+
+    font-size: 1rem;
+}
+
+.weatherCard-36hrs:nth-child(3){
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    font-size: 1rem;
+}
+
+.weatherCard-36hrs-time {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.weatherCard-36hrs-icon {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    justify-self: center;
+
+    display: block;
+    width: 70%;
+    height: auto;
+}
+
+.weatherCard-36hrs-temperature {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    justify-self:left;
+
+    font-size: 1.5em;
+}
+
+.weatherCard-36hrs-PoP {
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+    width: 3em;
+    border-radius: 0.3em;
+    background-color: rgb(100, 100, 100);
+    text-align: center;
+
+    font-size: 0.8em;
+}
+
+.weatherCard-36hrs-description {
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    font-size: 0.5em;
+}
+
+.location-select {
+    
+    width: 8em;
+    height: 2em;
+    border-radius: 0.5em;
+    margin: 0.5em 0 0.5em 1em;
+
+    font-size: 1.5rem;
+    background-color: rgb(39,39,39);
+    text-align: center;
+}
+
+.location-select > option {
+    font-size: 1rem;
+}
+
+
+/*//////////////////////////////
+WeatherForcast _2days 和 _1week 共用
+//////////////////////////////*/
+.weatherForecast-2days_1week {
+    width: 40em;
+    height: 15em;
+    border-radius: 1.1em;
+    background-color: rgb(39,39,39);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+
+    overflow: hidden;
+}
+
+.grid-column_row-2days {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.grid-column_row-1week {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.weatherForecast-2days_1week-title{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.weatherCard-2days_1week-container {
+    width: 100%;
+    height: 75%;
+    padding: 0 1em 0 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2em;
+
+    overflow: auto;
+}
+
+.weatherCard-2days_1week-container::-webkit-scrollbar {
+    height: 15px;
+}
+
+.weatherCard-2days_1week-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.0);
+    
+}
+
+.weatherCard-2days_1week-container::-webkit-scrollbar-thumb {
+    background: rgb(97,218,251);
+    border-radius: 100vh;
+}
+
+.weatherCard-2days_1week {
+    width: 3em;
+    height: 98%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.weatherCard-2days_1week-icon {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.weatherCard-2days_1week-temperature {
+    background-color: rgb(92,153,130);
+    border-radius: 0.3em;
+    width: 2em;
+    text-align: center;;
+}
+
+.align-self-start{
+    align-self: start;
+}
+
+.align-self-end{
+    align-self: end;
+}
+
+.align-self-center{
+    align-self: center;
+}
+
+.justify-self-start{
+    justify-self: start;
+}
+
+.justify-self-end{
+    justify-self: end;
+}
+
+/*//////////////////////////////
+WeatherForcast_1week
+//////////////////////////////*/
+.weatherCard-1week-dayNight {
+    font-size: 1.5rem;
+    padding: 0.2em;
+    border-radius: 0.4em;
+    background-color: rgb(125, 125, 125);
+}
+
+.weatherCard-1week-desc_temp {
+    height: 6em;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/*//////////////////////////////
+RWD
+//////////////////////////////*/
+@media screen and (max-width: 992px){
+    .weatherForecast-36hrs {
+        width: 70%;
+        align-self: center;
+    }
+
+    .weatherForecast-2days_1week {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .weatherForecast-36hrs {
+        width: 85%;
+        font-size: calc(2em * 768px* 0.75);
+        align-self: center;
+    }
+
+    .weatherCard-36hrs-temperature {
+        font-size: 2em;
+    }
+
+    .weatherForecast-2days_1week {
+        width: 85%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .weatherForecast-36hrs {
+        width: 95%;
+        font-size: calc(2em * 576px* 0.75);
+        align-self: center;
+    }
+
+    .weatherCard-36hrs-temperature {
+        font-size: 1.2em;
+    }
+
+    .weatherForecast-2days_1week {
+        width: 95%;
+        align-self: center;
+    }
+}
