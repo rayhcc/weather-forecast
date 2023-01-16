@@ -4,7 +4,7 @@ import {parseDate, to2Digit_string} from "../function";
 
 const GetWeatherCardTime = (ms) => {
 
-    const today = parseDate(new Date());
+    const today = parseDate(new Date().getTime());
     const weatherInfoDate = parseDate(ms);
 
     return(
