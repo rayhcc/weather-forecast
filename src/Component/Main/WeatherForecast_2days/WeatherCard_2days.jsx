@@ -33,7 +33,7 @@ export default function WeatherCard_2days(props){
 
             <img 
                 className = "weatherCard-2days_1week-icon"
-                src = {`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${parseDate(Date.parse(props.weatherInfo.time.startTime)).dayNight}/${to2Digit_string(props.weatherInfo.weatherDesc.value)}.svg`}
+                src = {`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${parseDate(Date.parse(props.weatherInfo.time.startTime.replace(/\-/g, '/'))).dayNight}/${to2Digit_string(props.weatherInfo.weatherDesc.value)}.svg`}
             />
 
             <p className = "weatherCard-2days-PoP">
@@ -45,7 +45,7 @@ export default function WeatherCard_2days(props){
             </p>
 
             <p className = "weatherCard-2days_1week-time">
-                {GetWeatherCardTime(Date.parse(props.weatherInfo.time.startTime))}
+                {GetWeatherCardTime(Date.parse(props.weatherInfo.time.startTime.replace(/\-/g, '/')))}
             </p>
 
         </div>

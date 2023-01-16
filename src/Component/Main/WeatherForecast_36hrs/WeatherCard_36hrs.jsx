@@ -24,12 +24,12 @@ export default function WeatherCard_36hrs(props){
         <div className = "weatherCard-36hrs">
 
             <p className = "weatherCard-36hrs-time">
-                { GetWeatherCardTime(Date.parse(props.weatherInfo.time.startTime)) }
+                { GetWeatherCardTime(Date.parse(props.weatherInfo.time.startTime.replace(/\-/g, '/') )) }
             </p>
 
             <img 
                 className = "weatherCard-36hrs-icon"
-                src = {`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${parseDate(Date.parse(props.weatherInfo.time.startTime)).dayNight}/${to2Digit_string(props.weatherInfo.weatherDesc.value)}.svg`}
+                src = {`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/${parseDate(Date.parse(props.weatherInfo.time.startTime.replace(/\-/g, '/'))).dayNight}/${to2Digit_string(props.weatherInfo.weatherDesc.value)}.svg`}
             >
             </img>
             

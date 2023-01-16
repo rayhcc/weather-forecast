@@ -23,11 +23,11 @@ export default function WeatherCard_1week(props){
         <div className = "weatherCard-2days_1week">
             
             <p className = "weatherCard-day-1week">
-                {GetWeatherCardDay_Chinese(Date.parse(props.weatherInfo.night.time.startTime))}
+                {GetWeatherCardDay_Chinese(Date.parse(props.weatherInfo.night.time.startTime.replace(/\-/g, '/')))}
             </p>
 
             <p className = "weatherCard-2days_1week-time">
-                {new Date(Date.parse(props.weatherInfo.night.time.startTime)).getDate()}日
+                {new Date(Date.parse(props.weatherInfo.night.time.startTime.replace(/\-/g, '/'))).getDate()}日
             </p>
 
 
