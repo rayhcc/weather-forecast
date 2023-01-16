@@ -33,14 +33,14 @@ export default function WeatherCard_1week(props){
 
             <div className = "weatherCard-1week-desc_temp">
                 {
-                    // props.weatherInfo.day.time.startTime.length !== 0 && 
+                    props.weatherInfo.day.time.startTime && 
                     <img 
                         className = "weatherCard-2days_1week-icon"
                         src = {`https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/${to2Digit_string(props.weatherInfo.day.weatherDesc.value)}.svg`}
                     />
                 }
                 {
-                    // props.weatherInfo.day.time.startTime.length !== 0 && 
+                    props.weatherInfo.day.time.startTime && 
                     <p className = 'weatherCard-2days_1week-temperature'>
                         {props.weatherInfo.day.temperature}&#xb0;
                     </p>
